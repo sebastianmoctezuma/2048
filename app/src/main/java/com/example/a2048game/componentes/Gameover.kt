@@ -1,4 +1,4 @@
-package com.example.a2048game.component
+package com.example.a2048game.componentes
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement

@@ -38,7 +38,7 @@ fun Juego(){
         Box{
             Tablero(alineacion = Alignment.Center)
             Header()
-            ControlesAbajo()
+            BotonesAbajo()
         }
     }
 }
@@ -166,7 +166,7 @@ fun Header(){
 
 
 @Composable
-fun ControlesAbajo() {
+fun BotonesAbajo() {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
