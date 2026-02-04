@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.Icon
@@ -26,7 +27,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.MoreVert
 
 
@@ -35,7 +35,7 @@ import androidx.compose.material.icons.filled.MoreVert
 @Composable
 fun Juego(){
     Box(modifier = Modifier.background(Color(0xFFFAF8EF)).fillMaxSize()){
-        Box(){
+        Box{
             Tablero(alineacion = Alignment.Center)
             Header()
             ControlesAbajo()
@@ -45,8 +45,8 @@ fun Juego(){
 @Composable
 fun Tablero(alineacion : Alignment){
     Box(Modifier.fillMaxSize(),contentAlignment = alineacion){
-        Column() {
-            Row() {
+        Column{
+            Row{
                 Box(modifier = Modifier.height(75.dp).width(75.dp).background(Color(0xFFEDE0C8)).border(5.dp,Color(0xFF776E65))){
                     Text(text="4", modifier = Modifier.align(Alignment.Center), fontSize = 25.sp)
                 }
@@ -64,7 +64,7 @@ fun Tablero(alineacion : Alignment){
                 }
             }
 
-            Row() {
+            Row{
                 Box(modifier = Modifier.height(75.dp).width(75.dp).background(Color(0xFFB79D8E)).border(5.dp,Color(0xFF776E65))){
                     Text(text="", modifier = Modifier.align(Alignment.Center), fontSize = 25.sp)
                 }
@@ -82,7 +82,7 @@ fun Tablero(alineacion : Alignment){
                 }
             }
 
-            Row() {
+            Row{
                 Box(modifier = Modifier.height(75.dp).width(75.dp).background(Color(0xFFB79D8E)).border(5.dp,Color(0xFF776E65))){
                     Text(text="", modifier = Modifier.align(Alignment.Center), fontSize = 25.sp)
                 }
@@ -105,7 +105,7 @@ fun Tablero(alineacion : Alignment){
                 }
             }
 
-            Row() {
+            Row{
                 Box(modifier = Modifier.height(75.dp).width(75.dp).background(Color(0xFFB79D8E)).border(5.dp,Color(0xFF776E65))){
                     Text(text="", modifier = Modifier.align(Alignment.Center), fontSize = 40.sp)
                 }
@@ -128,7 +128,7 @@ fun Tablero(alineacion : Alignment){
 
 @Composable
 fun Header(){
-    Column() {
+    Column{
         Box(modifier = Modifier.fillMaxWidth()){
             Icon(imageVector = Icons.Default.Menu,
                 contentDescription = null,
@@ -143,7 +143,7 @@ fun Header(){
                 tint = Color(0xFF776E65),
                 modifier = Modifier.align(Alignment.TopEnd).size(50.dp))
         }
-        Row(){
+        Row{
             Box(modifier = Modifier.fillMaxWidth()){
                 Box(modifier = Modifier.background(Color(0xFFD3C0B3), shape = RoundedCornerShape(15.dp)).width(180.dp).height(40.dp)){
                     Text(text="SCORE", modifier = Modifier.align(Alignment.CenterStart).padding(start = 10.dp),fontWeight = FontWeight.Bold)
@@ -182,13 +182,13 @@ fun ControlesAbajo() {
                 Box(modifier = Modifier.size(55.dp).background(Color(0xFFBDACA5), shape = RoundedCornerShape(15.dp)),
                     contentAlignment = Alignment.Center
                 ) {
-                    Icon(imageVector = Icons.Default.ArrowBack, contentDescription = "Undo", tint = Color(0xFF776E65), modifier = Modifier.size(28.dp))
+                    Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = null, tint = Color(0xFF776E65), modifier = Modifier.size(28.dp))
                 }
 
                 Box(modifier = Modifier.size(55.dp).background(Color(0xFFBDACA5), shape = RoundedCornerShape(15.dp)),
                     contentAlignment = Alignment.Center
                 ) {
-                    Icon(imageVector = Icons.Default.Refresh, contentDescription = "Refresh",
+                    Icon(imageVector = Icons.Default.Refresh, contentDescription = null,
                         tint = Color(0xFF776E65),
                         modifier = Modifier.size(28.dp)
                     )
